@@ -41,7 +41,7 @@ export const botConfig = {
     owners: process.env.OWNER_IDS?.split(",") || [],
 
     // Default wait time between command uses (in seconds).
-    defaultCooldown: 3, 
+    defaultCooldown: 1, 
 
     // If true, old commands are removed before re-registering.
     deleteCommands: false,
@@ -156,15 +156,15 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "rupee",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "rupees",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "₹",
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 5000,
 
     // Maximum bank amount before upgrades (if upgrades are used).
     baseBankCapacity: 100000,
@@ -173,19 +173,19 @@ export const botConfig = {
     dailyAmount: 100,
 
     // Work command random payout range.
-    workMin: 10,
-    workMax: 100,
+    workMin: 500,
+    workMax: 15000,
 
     // Beg command random payout range.
     begMin: 5,
     begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.6,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 3600000, 
+    robFailJailTime: 900000, 
   },
 
   // =========================
